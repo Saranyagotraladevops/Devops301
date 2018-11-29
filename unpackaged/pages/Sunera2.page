@@ -1,0 +1,62 @@
+<apex:page standardController="account" sidebar="false" showChat="false" standardStylesheets="true">
+<apex:stylesheet value="{!urlfor($Resource.styles,'styles.css')}"/>
+  <apex:pageBlock title="First Block">
+      <apex:pageBlockSection title="Section">
+          <apex:pageblockSectionItem > Account Name: {!account.name} </apex:pageblockSectionItem>
+          <apex:pageblockSectionItem > Account Name: {!account.name}  </apex:pageblockSectionItem> 
+          <apex:pageblockSectionItem > Account Name: {!account.name} </apex:pageblockSectionItem> 
+          <apex:pageblockSectionItem > Account Name: {!account.name} </apex:pageblockSectionItem>    
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock title="Second Block">
+        <apex:pageblockSection title="Cases" collapsible="false">
+        <apex:pageblockTable value="{!account.cases}" var="item">
+            <apex:column value="{!item.casenumber}"/>
+            <apex:column value="{!item.origin}"/>
+            <apex:column value="{!item.type}"/>
+            <apex:column value="{!item.contact.name}" />
+        </apex:pageblockTable>
+        </apex:pageblockSection>
+        <apex:pageblockSection title="Contacts" collapsible="false">
+        <apex:dataTable value="{!account.contacts}" var="item" border="1">
+            <apex:column value="{!item.name}"/>
+            <apex:column value="{!item.phone}"/>
+            <apex:column value="{!item.email}"/>
+            <apex:column value="{!item.account.name}" />
+        </apex:dataTable>
+        </apex:pageblockSection>
+         <apex:pageblockSection title="Contacts" collapsible="false">
+        <apex:datalist value="{!account.contacts}" var="item" >
+            <apex:outputfield value="{!item.name}"/>
+        </apex:datalist>
+        </apex:pageblockSection>
+        <hr></hr>
+      
+               <apex:detail relatedList="false" title="true"/>
+         <hr></hr>
+        <apex:pageblockSection title="Related Lists" collapsible="false">
+        <apex:tabPanel switchType="client" activeTabClass="contacts">
+            <apex:tab label="Contacts"> <apex:relatedList subject="{!account}" list="contacts"/> </apex:tab>
+            <apex:tab label="Cases"> <apex:relatedList subject="{!account}" list="cases"/> </apex:tab>
+            <apex:tab label="Opportunities"> <apex:relatedList subject="{!account}" list="opportunities"/> </apex:tab>
+            <apex:tab label="Activities">  <apex:relatedList subject="{!account}" list="openactivities"/> </apex:tab>
+        </apex:tabPanel>
+        </apex:pageblockSection>
+         <apex:pageblockSection title="Input Form" collapsible="false">
+             <apex:form >
+                <apex:inputText /> <br></br>
+                <apex:inputCheckbox /> <br></br>
+                <apex:selectList multiselect="false" >
+                <apex:selectOption itemvalue="One"></apex:selectOption>
+               
+                <apex:selectOption itemvalue="two"></apex:selectOption>
+               
+                <apex:selectOption itemvalue="three"></apex:selectOption>
+                </apex:selectList> <br></br>
+                <apex:commandButton value="save"/>
+             </apex:form>
+        </apex:pageblockSection>
+
+       
+  </apex:pageBlock>
+</apex:page>

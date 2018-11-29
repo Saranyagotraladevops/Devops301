@@ -1,0 +1,31 @@
+<apex:page standardController="Employee__c" extensions="Task" showHeader="false">
+    <apex:pageBlock >
+        <apex:pageBlockSection title="Employee Details" collapsible="false">
+            
+            <apex:outputField value="{!Employee__c.Name}"/>
+            <apex:outputField value="{!Employee__c.Batch__c}"/>
+            <apex:outputField value="{!Employee__c.Email_id__c}"/>
+            <apex:outputField value="{!Employee__c.Employee_designation__c}"/>
+            <apex:outputField value="{!Employee__c.Employee_ID__c}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection >
+            <apex:form >
+            <apex:outputField value="{!A.Employee__c}"/>
+            <apex:outputLink value="{!A.Employee__c}">Select Task</apex:outputLink>
+            <apex:commandLink value="{!A.Name}"/>
+            </apex:form>
+            </apex:pageBlockSection>
+            
+            
+            <apex:pageBlockSection id="Task__c" collapsible="false" title="Employee Task">
+            <apex:outputField value="{!A.Name}"/>
+            <apex:outputField value="{!A.Task_Description__c}"/>
+            <apex:outputField value="{!A.Priority__c}"/>
+            <apex:outputField value="{!A.Employee__c}"/>
+
+            </apex:pageBlockSection>
+                     
+    </apex:pageBlock>
+    
+</apex:page>

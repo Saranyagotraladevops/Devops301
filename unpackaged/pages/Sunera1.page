@@ -1,0 +1,18 @@
+<apex:page sidebar="false" showChat="false" showHeader="false" standardController="account" >
+<apex:pageBlock title="block1">
+<apex:form >
+
+
+Name:<apex:inputText value="{!account.name}"/>
+Description:<apex:inputTextarea value="{!account.description}"/>
+Rating:<apex:selectList value="{!account.rating}">
+<apex:selectOption itemValue="warm"></apex:selectOption>
+<apex:selectOption itemValue="cold"></apex:selectOption>
+<apex:selectOption itemValue="hot"></apex:selectOption>
+</apex:selectList>
+
+
+
+</apex:form>
+</apex:pageBlock>  
+</apex:page>

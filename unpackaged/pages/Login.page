@@ -1,0 +1,15 @@
+<apex:page controller="LoginPage1" showHeader="false">
+<apex:form >
+<apex:pageBlock >
+  <apex:pageBlockSection title="Login" columns="1" collapsible="false"> 
+  <apex:inputField value="{!values.Employee_ID__c}"/>
+  <apex:inputSecret value="{!values.Password__c}"/>
+  </apex:pageBlockSection>
+  <apex:pageBlockButtons >
+  <apex:commandButton action="{!submit}" value="Save"/>
+  <apex:commandButton action="{!signin}" value="Sign In"/>
+
+  </apex:pageBlockButtons>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,7 @@
+<apex:page sidebar="false"
+showHeader="false">
+<p>Test Before</p>
+<apex:include pageName="Sunera3"/>
+<p>Test
+After</p>
+</apex:page>

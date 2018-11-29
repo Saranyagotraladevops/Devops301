@@ -1,0 +1,11 @@
+<apex:page standardController="account" sidebar="false" showChat="false" standardStylesheets="false">
+<apex:pageMessages ></apex:pageMessages>
+<apex:pageBlock title="block1">
+<apex:composition template="Sunera3">
+<apex:define name="body"><h1>my page</h1>
+</apex:define>
+</apex:composition>
+
+</apex:pageBlock>
+  
+</apex:page>

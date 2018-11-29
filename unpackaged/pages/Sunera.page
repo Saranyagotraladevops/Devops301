@@ -1,0 +1,41 @@
+<apex:page sidebar="false" showChat="true" showHeader="true" standardController="Account">
+<apex:pageBlock title="My First Visual Force Program">
+<p>
+{!if(contains("Hello","llo"),'Yes','No')}
+
+<pre>
+<apex:form >
+<b>Name </b>      :<apex:inputField value="{!account.name}"/>
+<b>Rating  </b>   :<apex:inputField value="{!account.Rating}"/><br/>
+
+<b>Description</b>:<apex:inputField value="{!account.description}"/><br/>
+
+<b>Name </b>      :<apex:inputText value="{!account.name}"/><br/>
+<b>Rating  </b>   :<apex:selectList >
+        <apex:selectOption itemvalue="warm"></apex:selectOption>
+        <apex:selectOption itemvalue="hot"></apex:selectOption>
+        <apex:selectOption itemvalue="cold"></apex:selectOption>
+         </apex:selectList><br/>
+<b>Description</b>:<apex:inputTextarea value="{!account.description}"/><br/><br/>
+
+<apex:selectRadio >
+<apex:selectOption ><b>one</b></apex:selectOption>&nbsp;&nbsp;&nbsp;
+<apex:selectOption ><b>two</b></apex:selectOption>&nbsp;&nbsp;
+<apex:selectOption ><b>three</b></apex:selectOption>
+</apex:selectRadio><br/>
+
+
+<apex:selectRadio label="MarritalStatus">
+<apex:selectOption ><b>Single</b></apex:selectOption>&nbsp;
+<apex:selectOption ><b>Married</b></apex:selectOption>
+
+</apex:selectRadio>
+
+
+Name:<apex:outputText value="{!account.name}"/>
+
+</apex:form>
+</pre>
+</p>
+</apex:pageBlock>
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page standardController="merchandise__c" recordSetVar="merchandise" >
+ <apex:pageblock title="List of products">
+  <apex:dataTable value="{!merchandise}" var="p">
+<apex:column value="{!p.name}" headerValue="Name"/>
+<apex:column value="{!p.Price__c}" headerValue="Price" />
+  </apex:dataTable>
+</apex:pageblock>  
+</apex:page>

@@ -1,0 +1,9 @@
+<apex:page >
+  <apex:pageBlock >
+      <apex:pageBlockSection title="Sample">
+        <apex:form >
+         <apex:outputLink value="{!urlfor($Page.Sunera)}" target="blank">e-Mail</apex:outputLink>
+        </apex:form>
+      </apex:pageBlockSection>
+  </apex:pageBlock>
+</apex:page>

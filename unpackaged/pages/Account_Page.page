@@ -1,0 +1,56 @@
+<apex:page controller="AngularJSapexcontrl" docType="html-5.0" showHeader="true" standardStylesheets="false" sidebar="false"  >
+
+<head>
+    <link type="text/css" rel="stylesheet" href="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/css/font-awesome.min.css')}"/>
+    <link type="text/css" rel="stylesheet" href="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/css/font-awesome.css')}"/>
+    <link type="text/css" rel="stylesheet" href="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/fonts/fontawesome-webfont.eot')}"/>
+    <link type="text/css" rel="stylesheet" href="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/fonts/fontawesome-webfont.svg')}"/>
+    <link type="text/css" rel="stylesheet" href="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/fonts/fontawesome-webfont.ttf')}"/>
+    <link type="text/css" rel="stylesheet" href="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/fonts/fontawesome-webfont.woff')}"/>
+    <link type="text/css" rel="stylesheet" href="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/fonts/fontawesome-webfont.woff2')}"/>
+    <link type="text/css" rel="stylesheet" href="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/fonts/FontAwesome.otf')}"/>
+</head>  
+<apex:stylesheet value="{!URLFOR($Resource.Bootstrap, 'bootstrap-3.3.6-dist/css/bootstrap.min.css')}" />
+<apex:stylesheet value="{!URLFOR($Resource.Escalationpageangular, 'Escalationpageangular/Escalationpageangular/css/bootstrap.min.css')}" />
+<apex:stylesheet value="{!URLFOR($Resource.Escalationpageangular, 'Escalationpageangular/Escalationpageangular/css/styles.css')}" />
+
+<script type="text/javascript" src="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/Js/angular/angular.js')}"></script>
+<script type="text/javascript" src="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/Js/angular/angular-route.js')}"></script>
+<script type="text/javascript" src="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/Js/angular/angular-ui-bootstrap.js')}"></script>
+
+<script type="text/javascript" src="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/Js/app/app.js')}"></script>
+<script type="text/javascript" src="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/Js/app/Tablecontroller.js')}"></script>
+<script type="text/javascript" src="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/Js/app/Corelicensescontroller.js')}"></script>
+<script type="text/javascript" src="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/Js/app/Queuenamescontroller.js')}"></script>
+<script type="text/javascript" src="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/Js/app/angular-modal-service.js')}"></script>
+<script type="text/javascript" src="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/Js/app/Dialogmodalcontroller.js')}"></script>
+<script type="text/javascript" src="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/Js/app/Services.js')}"></script>
+
+<script>
+  var CONFIG = {};
+  CONFIG.home_page = '{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/views/Escalationhomepage.html')}';
+  CONFIG.corepage = '{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/views/Corelicenselistpage.html')}';
+  CONFIG.pagemodal = '{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/views/Queueselectionpage.html')}';
+  CONFIG.deletealert = '{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/views/Dialogmodal.html')}';
+  
+</script>
+
+<style>
+table {
+    border-collapse: collapse;
+    border: 1px solid blue;
+}
+h2{
+    color:solid blue;
+}
+</style>
+
+<body>
+ <apex:form >
+ <div ng-app="myApp">
+   <div class="ng-view"></div>
+ </div>
+ </apex:form> 
+</body>
+
+</apex:page>
