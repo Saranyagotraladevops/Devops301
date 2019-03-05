@@ -1,6 +1,6 @@
 <apex:page controller="AngularJSapexcontrl" docType="html-5.0" showHeader="true" standardStylesheets="false" sidebar="false"  >
 
-<head>
+<head><!--->
     <link type="text/css" rel="stylesheet" href="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/css/font-awesome.min.css')}"/>
     <link type="text/css" rel="stylesheet" href="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/css/font-awesome.css')}"/>
     <link type="text/css" rel="stylesheet" href="{!URLFOR($Resource.Escalationpageangular,'Escalationpageangular/Escalationpageangular/fonts/fontawesome-webfont.eot')}"/>
